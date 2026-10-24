@@ -141,13 +141,16 @@
   /* ========== 4. カリキュラム ========== */
   .curri{background:var(--bg2)}
   .curri-list{list-style:none;border-top:1px solid var(--ink)}
-  .curri-list li{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:22px 0;border-bottom:1px solid var(--line)}
+  .curri-list>li{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:22px 0;border-bottom:1px solid var(--line)}
   .curri-list .d{font-family:var(--en);line-height:1.1}
   .curri-list .d b{display:block;font-size:30px;font-weight:700;letter-spacing:-.01em}
   .curri-list .d i{font-style:normal;font-size:12px;letter-spacing:.1em;color:var(--sub)}
   .curri-list .day{font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--accent)}
   .curri-list h3{font-size:16px;line-height:1.6}
-  .curri-list p{font-size:13px;color:var(--sub)}
+  .curri-list .d b+b{margin-top:6px}
+  .pts{list-style:none;margin-top:6px}
+  .pts li{position:relative;padding-left:14px;font-size:13px;line-height:1.75;color:#333;margin-bottom:4px}
+  .pts li::before{content:"";position:absolute;left:0;top:.85em;width:6px;height:1px;background:var(--accent)}
   .curri-note{margin-top:28px;font-size:13px;line-height:1.9}
 
   /* ========== 5. 講師 ========== */
@@ -380,15 +383,13 @@
   <div class="wrap">
     <div class="sec-head rv"><span class="no">03 <em>PROGRAM</em></span><h2 class="big">カリキュラム</h2><p class="lead">全6回・月1回（火曜）・各回10:00〜16:00</p></div>
     <ol class="curri-list rv">
-      <li><span class="d"><b>1/26</b><i>火曜</i></span><div><span class="day">第1回</span><h3>テーマ <span class="tbc">【要確認】</span></h3><p>内容 <span class="tbc">【要確認】</span></p></div></li>
-      <li><span class="d"><b>2/16</b><i>火曜</i></span><div><span class="day">第2回</span><h3>テーマ <span class="tbc">【要確認】</span></h3><p>内容 <span class="tbc">【要確認】</span></p></div></li>
-      <li><span class="d"><b>3/23</b><i>火曜</i></span><div><span class="day">第3回</span><h3>テーマ <span class="tbc">【要確認】</span></h3><p>内容 <span class="tbc">【要確認】</span></p></div></li>
-      <li><span class="d"><b>4/20</b><i>火曜</i></span><div><span class="day">第4回</span><h3>テーマ <span class="tbc">【要確認】</span></h3><p>内容 <span class="tbc">【要確認】</span></p></div></li>
-      <li><span class="d"><b>5/25</b><i>火曜</i></span><div><span class="day">第5回</span><h3>テーマ <span class="tbc">【要確認】</span></h3><p>内容 <span class="tbc">【要確認】</span></p></div></li>
-      <li><span class="d"><b>6/22</b><i>火曜</i></span><div><span class="day">第6回</span><h3>テーマ <span class="tbc">【要確認】</span></h3><p>内容 <span class="tbc">【要確認】</span></p></div></li>
+      <li><span class="d"><b>1/26</b><i>火曜</i></span><div><span class="day">第1回</span><h3>導入・チュートリアル／基礎操作</h3><ul class="pts"><li>ブロッキング、コームワーク、ボディモーション、スタンスなどの基礎を徹底</li><li>水平ボブやワンレングスのカットを通じて、ベースカットの重要性を理解</li></ul></div></li>
+      <li><span class="d"><b>2/16</b><b>3/23</b><i>火曜</i></span><div><span class="day">第2〜3回</span><h3>ボブ〜ローグラデーション系・チェック</h3><ul class="pts"><li>ボブのチェック</li><li>段をつけた水平グラデーション、前下がりグラボブなど、リフト操作への移行</li></ul></div></li>
+      <li><span class="d"><b>4/20</b><b>5/25</b><i>火曜</i></span><div><span class="day">第4〜5回</span><h3>ショート系・縦の操作</h3><ul class="pts"><li>マッシュショートやオーバーの角取り</li><li>より切り込んだショートスタイルの習得</li></ul></div></li>
+      <li><span class="d"><b>6/22</b><i>火曜</i></span><div><span class="day">第6回（最終回）</span><h3>アウトプット／試験</h3><ul class="pts"><li>自分で選んだスタイルを切る実践試験</li><li>スタイル写真の構造を分析・プレゼンし、デザイン思考を落とし込む</li><li>ディプロマ授与</li></ul></div></li>
     </ol>
     <figure class="spot r rv"><img src="images/style-03.jpg" alt="ショートスタイル" loading="lazy" style="object-position:50% 30%;aspect-ratio:3/4"></figure>
-    <p class="curri-note rv"><b>1日の流れ</b>：講義／デモンストレーション／実習（ウィッグ）など <span class="tbc">【要確認】</span><br><b>修了時</b>：修了証などの有無 <span class="tbc">【要確認】</span></p>
+    <p class="curri-note rv">最終回の試験を経て、<b>ディプロマを授与</b>します。</p>
   </div>
 </section>
 
