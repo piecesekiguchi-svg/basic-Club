@@ -64,18 +64,28 @@
   .logo .y{font-family:var(--en);font-size:9px;letter-spacing:.3em}
   .entry-link{font-weight:700;font-size:13px;letter-spacing:.08em;text-decoration:none;border-bottom:1.5px solid var(--ink);padding:0 4px 4px 16px;margin-top:8px}
 
-  .fv-band{position:absolute;inset:0;z-index:2;clip-path:polygon(62% 0,100% 0,100% 22%,38% 100%,0 100%,0 78%);opacity:.62}
-  .fv-band .ph{position:absolute;inset:0;align-items:flex-start;padding-top:66svh;padding-right:30%}
+  .fv{--clip:polygon(62% 0,100% 0,100% 22%,38% 100%,0 100%,0 78%)}
+  .fv-band{position:absolute;inset:0;z-index:2;clip-path:var(--clip);background:linear-gradient(180deg,#e0dfda 0%,#d6d5d0 55%,#c2c1bd 100%)}
+  .fv-band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.6s ease}
+  .fv-band img.on{opacity:1}
+  .fv-band .s1{object-fit:contain;object-position:62% 45%}
+  @media (min-width:768px){.fv-band .s1{object-position:64% 50%}}
+  .fv-band .s2{object-position:60% 22%}
+  /* 帯の中の文字：写真が透けるように半透明で重ねる */
+  .fv-ghost{position:absolute;inset:0;z-index:3;clip-path:var(--clip);pointer-events:none}
+  .fv-ghost .fv-big{color:rgba(10,10,10,.5)}
   .fv-big{position:absolute;z-index:1;left:16px;right:0;top:19svh;font-family:var(--en);font-weight:800;font-size:min(27vw,250px);line-height:.86;letter-spacing:-.02em}
   .fv-big span{display:block}
   .fv-big .jp{font-family:var(--jp-black);font-weight:900;font-size:.78em;line-height:1.1;letter-spacing:-.04em;margin-bottom:.06em}
   .fv-big span:nth-child(3){padding-left:.42em}
-  .fv-copy{position:absolute;z-index:3;right:18px;top:calc(19svh + 74vw);text-align:right}
+  .fv-copy{position:absolute;z-index:4;right:18px;top:calc(19svh + 74vw);text-align:right}
   .fv-copy p{font-size:clamp(20px,6.2vw,40px);line-height:1.5}
   .fv-copy p .slant{white-space:nowrap}
+  .fv-copy .slant{background:#fff;padding:0 .25em;line-height:1.35}
+  .fv-copy strong{margin-top:.12em}
   .fv-copy strong{display:block;font-family:var(--serif);font-weight:700;font-size:clamp(32px,11vw,72px);line-height:1.2}
   .fv-values{position:absolute;z-index:3;left:20px;bottom:7svh;font-size:11px;font-weight:500;line-height:1.75;letter-spacing:.04em}
-  .fv-values span{display:block}
+  .fv-values span{display:table;background:rgba(255,255,255,.88);padding:0 6px;margin-bottom:1px}
   .fv-values span:nth-child(2){padding-left:14px}.fv-values span:nth-child(3){padding-left:28px}.fv-values span:nth-child(4){padding-left:42px}.fv-values span:nth-child(5){padding-left:56px}
   .fv-circle{position:absolute;z-index:3;right:-80px;bottom:-90px;width:220px;height:220px;border:1px solid var(--ink);border-radius:50%}
   .scroll{position:absolute;z-index:4;right:24px;bottom:26px;font-family:var(--en);font-size:10px;letter-spacing:.2em;line-height:1.4}
@@ -227,8 +237,7 @@
     .wrap{padding:0 48px}
     .fv-head{padding:40px 56px}
     .logo .l{font-size:30px}
-    .fv-band{clip-path:polygon(66% 0,100% 0,100% 8%,34% 100%,0 100%,0 92%)}
-    .fv-band .ph{padding-top:14vh;padding-left:50%;padding-right:0}
+    .fv{--clip:polygon(66% 0,100% 0,100% 8%,34% 100%,0 100%,0 92%)}
     .fv-big{left:8vw;top:17vh;font-size:min(13vw,210px)}
     .fv-big span:nth-child(3){padding-left:0}
     .fv-copy{right:auto;left:52vw;top:calc(17vh + 14vw);text-align:left}
@@ -263,7 +272,11 @@
   </div>
 
   <div class="fv-big" aria-hidden="true"><span class="jp">ガチンコ</span><span>BASIC</span><span>CLUB</span></div>
-  <div class="fv-band"><div class="ph">メイン写真<br>（講師のカット風景）</div></div>
+  <div class="fv-band">
+    <img class="s1 on" src="images/main-style.jpg" alt="ベーシックを土台にしたショートスタイル">
+    <img class="s2" src="images/main-seminar.jpg" alt="講習で受講生に指導する講師">
+  </div>
+  <div class="fv-ghost" aria-hidden="true"><div class="fv-big"><span class="jp">ガチンコ</span><span>BASIC</span><span>CLUB</span></div></div>
 
   <h1 class="fv-copy">
     <p><span class="slant">型のない、型破りは</span></p>
@@ -509,6 +522,12 @@
       s.classList.toggle('show',past&&!(r.top<window.innerHeight&&r.bottom>0));
     }
     window.addEventListener('scroll',upd,{passive:true});upd();
+  })();
+  // メイン写真のクロスフェード
+  (function(){
+    var im=document.querySelectorAll('.fv-band img'),i=0;
+    if(im.length<2||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    setInterval(function(){im[i].classList.remove('on');i=(i+1)%im.length;im[i].classList.add('on')},5000);
   })();
   // スクロールで要素をふわっと表示
   (function(){
