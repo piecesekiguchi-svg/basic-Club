@@ -134,7 +134,9 @@
   .person .photo{position:relative;height:440px;margin:0 -20px}
   .person .photo .ph{position:absolute;inset:0;clip-path:polygon(30% 0,100% 0,100% 70%,70% 100%,0 100%,0 30%)}
   .person.alt .photo .ph{clip-path:polygon(0 0,70% 0,100% 30%,100% 100%,30% 100%,0 70%)}
-  .person .ename{font-family:var(--jp-black);font-weight:900;font-size:min(12vw,72px);line-height:1.15;letter-spacing:.02em;margin-top:-46px;position:relative;z-index:2}
+  .person .pimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:polygon(18% 0,100% 0,100% 82%,82% 100%,0 100%,0 18%)}
+  .person.alt .pimg{clip-path:polygon(0 0,82% 0,100% 18%,100% 100%,18% 100%,0 82%)}
+  .person .ename{font-family:var(--jp-black);font-weight:900;font-size:min(12vw,72px);line-height:1.15;letter-spacing:.02em;margin-top:20px;position:relative;z-index:2}
   .person .jname{font-family:var(--en);font-style:italic;font-size:13px;letter-spacing:.2em;color:var(--sub);margin-top:10px}
   .person .jname .tbc{font-size:12px;font-family:var(--sans);display:inline-block}
   .person .role{font-size:13px;color:var(--sub);line-height:1.7;margin-top:4px}
@@ -364,7 +366,7 @@
     <div class="sec-head rv"><span class="no">04 <em>INSTRUCTORS</em></span><h2 class="big">講師紹介</h2><p class="lead">2名の講師が担当します</p></div>
 
     <div class="person rv">
-      <div class="photo"><div class="ph">講師写真<br>（関口 裕樹）</div></div>
+      <div class="photo"><img class="pimg" src="images/sekiguchi.jpg" alt="講師 関口裕樹" loading="lazy" style="object-position:50% 20%"></div>
       <div>
         <p class="ename">関口 裕樹</p>
         <p class="jname">HIROKI SEKIGUCHI</p>
@@ -381,7 +383,7 @@
     </div>
 
     <div class="person alt rv">
-      <div class="photo"><div class="ph">講師写真<br>（ヤマグチ ヒロム）</div></div>
+      <div class="photo"><img class="pimg" src="images/yamaguchi.jpg" alt="講師 ヤマグチヒロム" loading="lazy" style="object-position:50% 15%"></div>
       <div>
         <p class="ename">ヤマグチ<br>ヒロム</p>
         <p class="jname">HIROMU YAMAGUCHI <span class="tbc">【要確認：漢字表記】</span></p>
