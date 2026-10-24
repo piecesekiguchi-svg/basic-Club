@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>型のない、型破りは【型なし】｜ガチンコベーシックCLUB</title>
+<title>ガチンコBASIC CLUB｜型のない、型破りは【型なし】</title>
 <meta name="description" content="ベーシックを1から学び直す、美容師のための全6回・少人数制（定員10名）のカット講習。2027年1月開講・東京代々木。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500;1,700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500;1,700&family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#0a0a0a;
@@ -22,6 +22,7 @@
     --en:"Jost",sans-serif;
     --serif:"Noto Serif JP",serif;
     --sans:"Noto Sans JP",sans-serif;
+    --jp-black:"Noto Sans JP",sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -37,16 +38,17 @@
   .sec-head{position:relative;margin-bottom:48px}
   .sec-head .no{font-family:var(--en);font-style:italic;font-size:13px;letter-spacing:.2em;display:flex;align-items:center;gap:10px}
   .sec-head .no::after{content:"";width:40px;height:1px;background:var(--ink)}
-  .sec-head .big{font-family:var(--en);font-weight:800;font-size:min(12vw,128px);line-height:.95;letter-spacing:-.01em;margin-top:12px;display:block}
-  .sec-head h2{font-family:var(--serif);font-size:20px;line-height:1.7;margin-top:14px}
+  .sec-head .big{font-family:var(--jp-black);font-weight:900;font-size:min(9.2vw,64px);line-height:1.3;letter-spacing:.02em;margin-top:14px;display:block}
+  .sec-head .no em{font-style:italic;letter-spacing:.2em;color:var(--sub)}
+  .sec-head .lead{font-size:14px;color:var(--sub);margin-top:12px;line-height:1.8}
 
   /* ---------- 申込ボタン ---------- */
   .cta{margin-top:48px}
-  .cta .note{font-family:var(--en);font-style:italic;font-size:12px;letter-spacing:.15em;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+  .cta .note{font-size:12px;letter-spacing:.06em;margin-bottom:10px;display:flex;align-items:center;gap:10px}
   .cta .note::before{content:"";width:8px;height:8px;background:var(--accent);flex:0 0 8px}
   .btn{position:relative;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;width:100%;max-width:520px;padding:18px 22px;background:var(--accent);color:#fff;text-decoration:none;overflow:hidden;transition:background .25s}
   .btn:hover{background:var(--accent-dark)}
-  .btn .en{font-family:var(--en);font-style:italic;font-weight:700;font-size:13px;letter-spacing:.25em;opacity:.85}
+  .btn .en{font-size:11px;letter-spacing:.15em;opacity:.85}
   .btn .ja{display:block;font-weight:700;font-size:16px;line-height:1.5;margin-top:2px}
   .btn .arr{width:44px;height:1px;background:#fff;position:relative;transition:width .25s}
   .btn .arr::after{content:"";position:absolute;right:0;top:0;width:9px;height:1px;background:#fff;transform:rotate(35deg);transform-origin:right}
@@ -56,22 +58,23 @@
   /* ========== 1. ファーストビュー ========== */
   .fv{position:relative;height:100svh;min-height:640px;background:#fff;overflow:hidden}
   .fv-head{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:flex-start;padding:22px 20px}
-  .logo .s{font-family:var(--en);font-size:10px;letter-spacing:.45em;display:flex;align-items:center;gap:6px}
+  .logo .s{font-size:10px;letter-spacing:.2em;display:flex;align-items:center;gap:6px}
   .logo .s i{width:9px;height:9px;background:var(--accent);clip-path:polygon(0 100%,100% 0,100% 100%)}
-  .logo .l{font-family:var(--en);font-weight:700;font-size:21px;letter-spacing:.08em;line-height:1.2;display:block}
+  .logo .l{font-family:var(--jp-black);font-weight:900;font-size:19px;letter-spacing:.04em;line-height:1.2;display:block}
   .logo .y{font-family:var(--en);font-size:9px;letter-spacing:.3em}
-  .entry-link{font-family:var(--en);font-style:italic;font-weight:700;font-size:15px;letter-spacing:.12em;text-decoration:none;border-bottom:1.5px solid var(--ink);padding:0 4px 4px 16px;margin-top:8px}
+  .entry-link{font-weight:700;font-size:13px;letter-spacing:.08em;text-decoration:none;border-bottom:1.5px solid var(--ink);padding:0 4px 4px 16px;margin-top:8px}
 
   .fv-band{position:absolute;inset:0;z-index:2;clip-path:polygon(62% 0,100% 0,100% 22%,38% 100%,0 100%,0 78%);opacity:.62}
-  .fv-band .ph{position:absolute;inset:0;align-items:flex-start;padding-top:18svh;padding-left:40%}
-  .fv-big{position:absolute;z-index:1;left:16px;right:0;top:28svh;font-family:var(--en);font-weight:800;font-size:min(27vw,250px);line-height:.86;letter-spacing:-.02em}
+  .fv-band .ph{position:absolute;inset:0;align-items:flex-start;padding-top:66svh;padding-right:30%}
+  .fv-big{position:absolute;z-index:1;left:16px;right:0;top:19svh;font-family:var(--en);font-weight:800;font-size:min(27vw,250px);line-height:.86;letter-spacing:-.02em}
   .fv-big span{display:block}
-  .fv-big span:nth-child(2){padding-left:.42em}
-  .fv-copy{position:absolute;z-index:3;right:18px;top:calc(28svh + 50vw);text-align:right}
+  .fv-big .jp{font-family:var(--jp-black);font-weight:900;font-size:.78em;line-height:1.1;letter-spacing:-.04em;margin-bottom:.06em}
+  .fv-big span:nth-child(3){padding-left:.42em}
+  .fv-copy{position:absolute;z-index:3;right:18px;top:calc(19svh + 74vw);text-align:right}
   .fv-copy p{font-size:clamp(20px,6.2vw,40px);line-height:1.5}
   .fv-copy p .slant{white-space:nowrap}
   .fv-copy strong{display:block;font-family:var(--serif);font-weight:700;font-size:clamp(32px,11vw,72px);line-height:1.2}
-  .fv-values{position:absolute;z-index:3;left:20px;bottom:7svh;font-family:var(--en);font-size:11px;line-height:1.75;letter-spacing:.04em}
+  .fv-values{position:absolute;z-index:3;left:20px;bottom:7svh;font-size:11px;font-weight:500;line-height:1.75;letter-spacing:.04em}
   .fv-values span{display:block}
   .fv-values span:nth-child(2){padding-left:14px}.fv-values span:nth-child(3){padding-left:28px}.fv-values span:nth-child(4){padding-left:42px}.fv-values span:nth-child(5){padding-left:56px}
   .fv-circle{position:absolute;z-index:3;right:-80px;bottom:-90px;width:220px;height:220px;border:1px solid var(--ink);border-radius:50%}
@@ -82,12 +85,12 @@
   /* FV直下：開催情報＋申込 */
   .fv-info{padding:44px 0 72px;border-bottom:1px solid var(--line)}
   .fv-info .name{font-family:var(--serif);font-size:20px;font-weight:700}
-  .fv-info .name small{display:block;font-family:var(--en);font-style:italic;font-size:12px;letter-spacing:.2em;color:var(--sub);font-weight:400}
+  .fv-info .name small{display:block;font-size:12px;letter-spacing:.1em;color:var(--sub);font-weight:400}
   .facts{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink)}
   .facts div{padding:14px 0;border-bottom:1px solid var(--line)}
   .facts div:nth-child(odd){padding-right:12px;border-right:1px solid var(--line)}
   .facts div:nth-child(even){padding-left:14px}
-  .facts dt{font-family:var(--en);font-style:italic;font-size:11px;letter-spacing:.2em;color:var(--sub)}
+  .facts dt{font-size:11px;letter-spacing:.1em;color:var(--sub)}
   .facts dd{font-size:13px;line-height:1.6;margin-top:4px}
   .facts dd b{font-family:var(--en);font-size:22px;font-weight:700;letter-spacing:0}
   .facts .wide{grid-column:1/-1;border-right:0!important;padding-right:0!important}
@@ -105,12 +108,12 @@
   .benefit-list{display:grid;gap:56px}
   .benefit{position:relative;padding-top:8px}
   .benefit .num{font-family:var(--en);font-weight:800;font-size:88px;line-height:.9;color:transparent;-webkit-text-stroke:1.2px var(--ink);display:block}
-  .benefit .en{font-family:var(--en);font-style:italic;font-size:12px;letter-spacing:.2em;color:var(--accent);margin-top:10px;display:block}
+  .benefit .en{font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--accent);margin-top:10px;display:block}
   .benefit h3{font-family:var(--serif);font-size:20px;line-height:1.6;margin:4px 0 8px}
   .benefit p{font-size:14px;color:var(--sub)}
   .benefit:nth-child(even){padding-left:16%}
   .diff{margin-top:72px;border-top:1px solid var(--ink)}
-  .diff h3{font-family:var(--en);font-style:italic;font-size:13px;letter-spacing:.2em;padding:16px 0 8px}
+  .diff h3{font-family:var(--serif);font-size:18px;padding:18px 0 8px}
   .diff h3 small{font-family:var(--sans);font-style:normal;letter-spacing:.05em;font-size:15px;margin-left:10px}
   .diff p{padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
 
@@ -120,8 +123,8 @@
   .curri-list li{display:grid;grid-template-columns:96px 1fr;gap:12px;padding:22px 0;border-bottom:1px solid var(--line)}
   .curri-list .d{font-family:var(--en);line-height:1.1}
   .curri-list .d b{display:block;font-size:30px;font-weight:700;letter-spacing:-.01em}
-  .curri-list .d i{font-size:12px;letter-spacing:.15em;color:var(--sub)}
-  .curri-list .day{font-family:var(--en);font-style:italic;font-size:12px;letter-spacing:.2em;color:var(--accent)}
+  .curri-list .d i{font-style:normal;font-size:12px;letter-spacing:.1em;color:var(--sub)}
+  .curri-list .day{font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--accent)}
   .curri-list h3{font-size:16px;line-height:1.6}
   .curri-list p{font-size:13px;color:var(--sub)}
   .curri-note{margin-top:28px;font-size:13px;line-height:1.9}
@@ -131,15 +134,15 @@
   .person .photo{position:relative;height:440px;margin:0 -20px}
   .person .photo .ph{position:absolute;inset:0;clip-path:polygon(30% 0,100% 0,100% 70%,70% 100%,0 100%,0 30%)}
   .person.alt .photo .ph{clip-path:polygon(0 0,70% 0,100% 30%,100% 100%,30% 100%,0 70%)}
-  .person .ename{font-family:var(--en);font-weight:800;font-size:min(14vw,92px);line-height:.92;letter-spacing:-.01em;margin-top:-46px;position:relative;z-index:2}
-  .person .jname{font-family:var(--serif);font-size:22px;font-weight:700;margin-top:18px}
+  .person .ename{font-family:var(--jp-black);font-weight:900;font-size:min(12vw,72px);line-height:1.15;letter-spacing:.02em;margin-top:-46px;position:relative;z-index:2}
+  .person .jname{font-family:var(--en);font-style:italic;font-size:13px;letter-spacing:.2em;color:var(--sub);margin-top:10px}
   .person .jname .tbc{font-size:12px;font-family:var(--sans);display:inline-block}
   .person .role{font-size:13px;color:var(--sub);line-height:1.7;margin-top:4px}
   .career{list-style:none;margin-top:24px;border-top:1px solid var(--ink)}
   .career li{padding:13px 0 13px 22px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.75;position:relative}
   .career li::before{content:"";position:absolute;left:0;top:25px;width:10px;height:1px;background:var(--accent)}
   .message{margin-top:16px;padding:32px 24px;border:1px solid var(--ink);position:relative}
-  .message .en{position:absolute;top:-11px;left:18px;background:#fff;padding:0 8px;font-family:var(--en);font-style:italic;font-size:12px;letter-spacing:.2em}
+  .message .en{position:absolute;top:-11px;left:18px;background:#fff;padding:0 8px;font-size:12px;font-weight:700;letter-spacing:.1em}
   .message p{font-size:14px}
 
   /* ========== 6. 受講者の声 ========== */
@@ -154,7 +157,7 @@
   .ba{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
   .ba div{position:relative}
   .ba .ph{aspect-ratio:3/4}
-  .ba i{position:absolute;left:0;bottom:-24px;font-family:var(--en);font-style:italic;font-size:11px;letter-spacing:.2em}
+  .ba i{position:absolute;left:0;bottom:-26px;font-style:normal;font-size:12px;font-weight:700;letter-spacing:.1em}
 
   /* ========== 7. 開催概要 ========== */
   .tbl{border-top:1px solid var(--ink)}
@@ -163,20 +166,20 @@
   .tbl .k b{display:block;font-family:var(--sans);font-style:normal;font-size:13px;color:var(--ink);letter-spacing:.05em;font-weight:500;margin-top:4px}
   .price{font-family:var(--en);font-weight:700;font-size:34px;line-height:1.1;letter-spacing:-.01em}
   .price-sub{display:block;font-size:12px;color:var(--sub);margin-top:6px}
-  .dates{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:2px 14px;font-family:var(--en);font-size:16px;font-weight:500}
+  .dates{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:2px 14px;font-size:16px;font-weight:700}
   .dates small{font-size:11px;color:var(--sub);letter-spacing:.1em}
   .seat{display:inline-block;background:var(--ink);color:#fff;font-size:11px;padding:1px 8px;margin-left:6px;vertical-align:2px}
 
   .flow{margin-top:72px;scroll-margin-top:24px}
   .flow h3{font-family:var(--serif);font-size:19px;margin-bottom:22px}
-  .flow h3 small{display:block;font-family:var(--en);font-style:italic;font-size:12px;letter-spacing:.2em;color:var(--sub);font-weight:400}
+  .flow h3 small{display:block;font-family:var(--sans);font-size:12px;letter-spacing:.05em;color:var(--sub);font-weight:400}
   .steps{list-style:none;border-top:1px solid var(--ink)}
   .steps li{display:grid;grid-template-columns:64px 1fr;gap:10px;padding:20px 0;border-bottom:1px solid var(--line);font-size:14px;align-items:start}
-  .steps .s{font-family:var(--en);font-style:italic;font-size:11px;letter-spacing:.2em;color:var(--accent);line-height:1}
+  .steps .s{font-size:10px;letter-spacing:.05em;color:var(--accent);line-height:1}
   .steps .s b{display:block;font-style:normal;font-weight:800;font-size:34px;color:var(--ink);letter-spacing:0;margin-top:4px}
   .copy-word{display:flex;align-items:center;gap:12px;margin-top:10px}
   .copy-word code{font-family:var(--sans);font-weight:700;font-size:18px;border:1px solid var(--ink);padding:4px 16px}
-  .copy-btn{font-family:var(--en);font-style:italic;font-size:12px;letter-spacing:.12em;border:0;border-bottom:1px solid var(--ink);background:none;padding:4px 2px;cursor:pointer;color:var(--ink)}
+  .copy-btn{font-size:12px;letter-spacing:.05em;border:0;border-bottom:1px solid var(--ink);background:none;padding:4px 2px;cursor:pointer;color:var(--ink)}
 
   /* ========== 8. FAQ ========== */
   .faq details{border-bottom:1px solid var(--line)}
@@ -192,20 +195,20 @@
 
   /* ========== 9. 最後の申込 ========== */
   .final{background:var(--ink);color:#fff;padding:110px 0 120px}
-  .final .bigentry{font-family:var(--en);font-weight:800;font-size:min(30vw,260px);line-height:.85;letter-spacing:-.02em;color:transparent;-webkit-text-stroke:1.2px rgba(255,255,255,.55);display:block;margin-left:-4px}
+  .final .bigentry{font-family:var(--jp-black);font-weight:900;font-size:min(17vw,150px);line-height:1.1;letter-spacing:-.02em;color:transparent;-webkit-text-stroke:1.2px rgba(255,255,255,.55);display:block;margin-left:-4px}
   .final h2{font-family:var(--serif);font-size:24px;line-height:1.7;margin-top:28px}
   .final p{font-size:14px;color:#bdbdbd;margin-top:18px}
   .final .cta .note{color:#fff}
   .final .cta .after{color:#9a9a9a}
   .final .deco-circle{border-color:#444}
   footer{background:#000;color:#777;font-size:11px;padding:28px 20px 34px;text-align:center;line-height:1.9}
-  footer .l{font-family:var(--en);font-weight:700;letter-spacing:.2em;color:#ddd;font-size:13px}
+  footer .l{font-family:var(--jp-black);font-weight:900;letter-spacing:.1em;color:#ddd;font-size:13px}
 
   /* ---------- 追従CTA ---------- */
   .sticky{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:auto 1fr;background:#fff;border-top:1px solid var(--ink);padding-bottom:env(safe-area-inset-bottom);transform:translateY(110%);transition:transform .35s}
   .sticky.show{transform:none}
   .sticky .txt{padding:10px 16px;font-size:11px;line-height:1.35;display:flex;flex-direction:column;justify-content:center}
-  .sticky .txt b{font-family:var(--en);font-size:15px;letter-spacing:.02em}
+  .sticky .txt b{font-size:14px;letter-spacing:.02em}
   .sticky a{display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--accent);color:#fff;text-decoration:none;padding:16px 18px;font-weight:700;font-size:15px}
   .sticky a .arr{width:28px;height:1px;background:#fff;position:relative}
   .sticky a .arr::after{content:"";position:absolute;right:0;top:0;width:7px;height:1px;background:#fff;transform:rotate(35deg);transform-origin:right}
@@ -221,12 +224,12 @@
     section{padding:140px 0}
     .wrap{padding:0 48px}
     .fv-head{padding:40px 56px}
-    .logo .l{font-size:34px}
+    .logo .l{font-size:30px}
     .fv-band{clip-path:polygon(66% 0,100% 0,100% 8%,34% 100%,0 100%,0 92%)}
-    .fv-band .ph{padding-top:14vh;padding-left:50%}
-    .fv-big{left:9vw;top:30vh;font-size:min(17vw,250px)}
-    .fv-big span:nth-child(2){padding-left:0}
-    .fv-copy{right:auto;left:50vw;top:calc(30vh + 2vw);text-align:left}
+    .fv-band .ph{padding-top:14vh;padding-left:50%;padding-right:0}
+    .fv-big{left:8vw;top:17vh;font-size:min(13vw,210px)}
+    .fv-big span:nth-child(3){padding-left:0}
+    .fv-copy{right:auto;left:52vw;top:calc(17vh + 14vw);text-align:left}
     .fv-copy p{font-size:clamp(22px,2.6vw,40px)}
     .fv-copy strong{font-size:clamp(36px,4.6vw,72px)}
     .fv-values{left:auto;right:8vw;bottom:12vh}
@@ -237,7 +240,7 @@
     .benefit:nth-child(even){padding-left:0;margin-top:96px}
     .person{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
     .person .photo{margin:0;height:560px}
-    .person .ename{margin-top:0;font-size:min(7vw,88px)}
+    .person .ename{margin-top:0;font-size:min(5.6vw,72px)}
     .person.alt .photo{order:2}
     .voices{grid-template-columns:repeat(3,1fr)}
     .tbl .row{grid-template-columns:180px 1fr}
@@ -251,14 +254,13 @@
 <header class="fv" id="top">
   <div class="fv-head">
     <div class="logo">
-      <span class="s"><i></i>SEMINAR&nbsp;2027</span>
-      <span class="l">BASIC CLUB.</span>
-      <span class="y">GACHINKO&nbsp;&nbsp;BASIC&nbsp;&nbsp;CLUB</span>
+      <span class="s"><i></i>美容師のためのベーシック講習 2027</span>
+      <span class="l">ガチンコBASIC CLUB</span>
     </div>
-    <a class="entry-link" href="#entry">ENTRY</a>
+    <a class="entry-link" href="#entry">申込はこちら</a>
   </div>
 
-  <div class="fv-big" aria-hidden="true"><span>BASIC</span><span>CLUB.</span></div>
+  <div class="fv-big" aria-hidden="true"><span class="jp">ガチンコ</span><span>BASIC</span><span>CLUB</span></div>
   <div class="fv-band"><div class="ph">メイン写真<br>（講師のカット風景）</div></div>
 
   <h1 class="fv-copy">
@@ -267,33 +269,33 @@
   </h1>
 
   <div class="fv-values" aria-hidden="true">
-    <span>Learn the Basics.</span>
-    <span>Cut Faster.</span>
-    <span>Last Longer.</span>
-    <span>Less Fatigue.</span>
-    <span>Skills for Life.</span>
+    <span>ベーシックを、1から。</span>
+    <span>カットが速くなる。</span>
+    <span>スタイルが長持ちする。</span>
+    <span>疲れにくくなる。</span>
+    <span>一生ものの技術に。</span>
   </div>
   <div class="fv-circle" aria-hidden="true"></div>
-  <div class="scroll" aria-hidden="true">SCROLL<br>DOWN<i></i></div>
+  <div class="scroll" aria-hidden="true">スクロール<i></i></div>
 </header>
 
 <main>
 <div class="fv-info">
   <div class="wrap inner">
     <div>
-      <p class="name"><small>GACHINKO BASIC CLUB</small>ガチンコベーシックCLUB</p>
+      <p class="name"><small>全6回コース</small>ガチンコBASIC CLUB</p>
       <dl class="facts">
-        <div><dt>START</dt><dd><b>01.26</b> 火<br>2027年・全6回</dd></div>
-        <div><dt>TIME</dt><dd><b>10–16</b><br>10:00〜16:00</dd></div>
-        <div><dt>PRICE</dt><dd><b>¥66,000</b><br>分割OK／1回¥11,000</dd></div>
-        <div><dt>CAPACITY</dt><dd><b>10</b> 名<br>少人数制</dd></div>
-        <div class="wide"><dt>PLACE</dt><dd>東京・代々木 <span class="tbc">【要確認：会場名】</span></dd></div>
+        <div><dt>開講日</dt><dd><b>1/26</b>（火）<br>2027年・全6回</dd></div>
+        <div><dt>時間</dt><dd><b>10–16</b><br>10:00〜16:00</dd></div>
+        <div><dt>参加費</dt><dd><b>¥66,000</b><br>分割OK／1回¥11,000</dd></div>
+        <div><dt>定員</dt><dd><b>10</b> 名<br>少人数制</dd></div>
+        <div class="wide"><dt>会場</dt><dd>東京・代々木 <span class="tbc">【要確認：会場名】</span></dd></div>
       </dl>
     </div>
     <div class="cta">
-      <p class="note">ENTRY — 美容師サプリ公式LINE</p>
+      <p class="note">お申し込みは「美容師サプリ公式LINE」から</p>
       <a class="btn" href="https://lin.ee/V2YqH0r" target="_blank" rel="noopener">
-        <span><span class="en">ENTRY</span><span class="ja">LINEで「ベーシック」と送って申し込む</span></span><span class="arr"></span>
+        <span><span class="en">お申し込み</span><span class="ja">LINEで「ベーシック」と送って申し込む</span></span><span class="arr"></span>
       </a>
       <p class="after">申込締切：<span class="tbc">【要確認】</span>　残席：<span class="tbc">【要確認】</span></p>
     </div>
@@ -304,7 +306,7 @@
 <section>
   <div class="deco-circle" style="width:220px;height:220px;right:-150px;top:40px" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="sec-head rv"><span class="no">01</span><span class="big">WORRY</span><h2>こんなお悩み、ありませんか？</h2></div>
+    <div class="sec-head rv"><span class="no">01 <em>WORRY</em></span><h2 class="big">こんなお悩み、<br>ありませんか？</h2></div>
     <ul class="worry-list rv">
       <li>オンラインで学んでも、なぜか綺麗に切れない</li>
       <li>カットに時間がかかり、予約を詰められない</li>
@@ -320,22 +322,22 @@
 <!-- ========== 3. 得られること ========== -->
 <section style="padding-top:40px">
   <div class="wrap">
-    <div class="sec-head rv"><span class="no">02</span><span class="big">BENEFIT</span><h2>このセミナーで得られること</h2></div>
+    <div class="sec-head rv"><span class="no">02 <em>BENEFIT</em></span><h2 class="big">このセミナーで<br>得られること</h2></div>
     <div class="benefit-list">
-      <div class="benefit rv"><span class="num">01</span><span class="en">Cut Faster.</span><h3>カットスピードが<br>圧倒的に早くなる</h3><p>「どこから・なぜ切るのか」が明確になれば、手が止まらなくなります。</p></div>
-      <div class="benefit rv"><span class="num">02</span><span class="en">Last Longer.</span><h3>お客様のスタイルの<br>持ちが変わる</h3><p>土台から正しく組み立てたカットは、伸びても形が崩れにくくなります。</p></div>
-      <div class="benefit rv"><span class="num">03</span><span class="en">Less Fatigue.</span><h3>営業や練習で<br>疲れにくくなる</h3><p>長時間の営業や練習でも、体に負担の少ないカットを目指します。</p></div>
-      <div class="benefit rv"><span class="num">04</span><span class="en">Skills for Life.</span><h3>一生ものの技術が<br>手に入る</h3><p>流行が変わっても揺るがない、すべてのスタイルの土台になる考え方です。</p></div>
+      <div class="benefit rv"><span class="num">01</span><span class="en">スピード</span><h3>カットスピードが<br>圧倒的に早くなる</h3><p>「どこから・なぜ切るのか」が明確になれば、手が止まらなくなります。</p></div>
+      <div class="benefit rv"><span class="num">02</span><span class="en">持ち</span><h3>お客様のスタイルの<br>持ちが変わる</h3><p>土台から正しく組み立てたカットは、伸びても形が崩れにくくなります。</p></div>
+      <div class="benefit rv"><span class="num">03</span><span class="en">体への負担</span><h3>営業や練習で<br>疲れにくくなる</h3><p>長時間の営業や練習でも、体に負担の少ないカットを目指します。</p></div>
+      <div class="benefit rv"><span class="num">04</span><span class="en">一生もの</span><h3>一生ものの技術が<br>手に入る</h3><p>流行が変わっても揺るがない、すべてのスタイルの土台になる考え方です。</p></div>
     </div>
     <div class="diff rv">
-      <h3>DIFFERENCE<small>オンライン学習との違い</small></h3>
+      <h3>オンライン学習との違い</h3>
       <p>定員10名の少人数制。会場で講師から直接指導を受けられます</p>
       <p>1日6時間 × 全6回。月1回ずつ、間に練習期間をとりながら半年かけて進みます</p>
       <p>「なぜそう切るのか」まで言葉で説明できるようになることを目指します</p>
     </div>
     <div class="cta rv">
       <p class="note">定員10名の少人数制です</p>
-      <a class="btn" href="https://lin.ee/V2YqH0r" target="_blank" rel="noopener"><span><span class="en">ENTRY</span><span class="ja">LINEで「ベーシック」と送って申し込む</span></span><span class="arr"></span></a>
+      <a class="btn" href="https://lin.ee/V2YqH0r" target="_blank" rel="noopener"><span><span class="en">お申し込み</span><span class="ja">LINEで「ベーシック」と送って申し込む</span></span><span class="arr"></span></a>
     </div>
   </div>
 </section>
@@ -343,14 +345,14 @@
 <!-- ========== 4. カリキュラム ========== -->
 <section class="curri">
   <div class="wrap">
-    <div class="sec-head rv"><span class="no">03</span><span class="big">PROGRAM</span><h2>カリキュラム<br><small style="font-family:var(--sans);font-size:13px;color:var(--sub);font-weight:400">全6回・月1回（火曜）・各回10:00〜16:00</small></h2></div>
+    <div class="sec-head rv"><span class="no">03 <em>PROGRAM</em></span><h2 class="big">カリキュラム</h2><p class="lead">全6回・月1回（火曜）・各回10:00〜16:00</p></div>
     <ol class="curri-list rv">
-      <li><span class="d"><b>01.26</b><i>TUE</i></span><div><span class="day">DAY 01</span><h3>テーマ <span class="tbc">【要確認】</span></h3><p>内容 <span class="tbc">【要確認】</span></p></div></li>
-      <li><span class="d"><b>02.16</b><i>TUE</i></span><div><span class="day">DAY 02</span><h3>テーマ <span class="tbc">【要確認】</span></h3><p>内容 <span class="tbc">【要確認】</span></p></div></li>
-      <li><span class="d"><b>03.23</b><i>TUE</i></span><div><span class="day">DAY 03</span><h3>テーマ <span class="tbc">【要確認】</span></h3><p>内容 <span class="tbc">【要確認】</span></p></div></li>
-      <li><span class="d"><b>04.20</b><i>TUE</i></span><div><span class="day">DAY 04</span><h3>テーマ <span class="tbc">【要確認】</span></h3><p>内容 <span class="tbc">【要確認】</span></p></div></li>
-      <li><span class="d"><b>05.25</b><i>TUE</i></span><div><span class="day">DAY 05</span><h3>テーマ <span class="tbc">【要確認】</span></h3><p>内容 <span class="tbc">【要確認】</span></p></div></li>
-      <li><span class="d"><b>06.22</b><i>TUE</i></span><div><span class="day">DAY 06</span><h3>テーマ <span class="tbc">【要確認】</span></h3><p>内容 <span class="tbc">【要確認】</span></p></div></li>
+      <li><span class="d"><b>1/26</b><i>火曜</i></span><div><span class="day">第1回</span><h3>テーマ <span class="tbc">【要確認】</span></h3><p>内容 <span class="tbc">【要確認】</span></p></div></li>
+      <li><span class="d"><b>2/16</b><i>火曜</i></span><div><span class="day">第2回</span><h3>テーマ <span class="tbc">【要確認】</span></h3><p>内容 <span class="tbc">【要確認】</span></p></div></li>
+      <li><span class="d"><b>3/23</b><i>火曜</i></span><div><span class="day">第3回</span><h3>テーマ <span class="tbc">【要確認】</span></h3><p>内容 <span class="tbc">【要確認】</span></p></div></li>
+      <li><span class="d"><b>4/20</b><i>火曜</i></span><div><span class="day">第4回</span><h3>テーマ <span class="tbc">【要確認】</span></h3><p>内容 <span class="tbc">【要確認】</span></p></div></li>
+      <li><span class="d"><b>5/25</b><i>火曜</i></span><div><span class="day">第5回</span><h3>テーマ <span class="tbc">【要確認】</span></h3><p>内容 <span class="tbc">【要確認】</span></p></div></li>
+      <li><span class="d"><b>6/22</b><i>火曜</i></span><div><span class="day">第6回</span><h3>テーマ <span class="tbc">【要確認】</span></h3><p>内容 <span class="tbc">【要確認】</span></p></div></li>
     </ol>
     <p class="curri-note rv"><b>1日の流れ</b>：講義／デモンストレーション／実習（ウィッグ）など <span class="tbc">【要確認】</span><br><b>修了時</b>：修了証などの有無 <span class="tbc">【要確認】</span></p>
   </div>
@@ -359,13 +361,13 @@
 <!-- ========== 5. 講師紹介 ========== -->
 <section>
   <div class="wrap">
-    <div class="sec-head rv"><span class="no">04</span><span class="big">INSTRUCTORS</span><h2>講師紹介 ─ 2名の講師が担当します</h2></div>
+    <div class="sec-head rv"><span class="no">04 <em>INSTRUCTORS</em></span><h2 class="big">講師紹介</h2><p class="lead">2名の講師が担当します</p></div>
 
     <div class="person rv">
       <div class="photo"><div class="ph">講師写真<br>（関口 裕樹）</div></div>
       <div>
-        <p class="ename">HIROKI<br>SEKIGUCHI</p>
-        <p class="jname">関口 裕樹</p>
+        <p class="ename">関口 裕樹</p>
+        <p class="jname">HIROKI SEKIGUCHI</p>
         <p class="role">株式会社PiECE 代表取締役<br>カット特化オンラインサロン「美容師サプリ」代表</p>
         <ul class="career">
           <li>2018年、湘南のトップサロン「CICATA」にオープニングスタッフとして参画</li>
@@ -381,8 +383,8 @@
     <div class="person alt rv">
       <div class="photo"><div class="ph">講師写真<br>（ヤマグチ ヒロム）</div></div>
       <div>
-        <p class="ename">HIROMU<br>YAMAGUCHI</p>
-        <p class="jname">ヤマグチ ヒロム <span class="tbc">【要確認：漢字表記】</span></p>
+        <p class="ename">ヤマグチ<br>ヒロム</p>
+        <p class="jname">HIROMU YAMAGUCHI <span class="tbc">【要確認：漢字表記】</span></p>
         <p class="role">ブランド「beep®」代表</p>
         <ul class="career">
           <li>国際文化理容美容専門学校 渋谷校 卒業 <span class="tbc">【要確認：正式校名】</span></li>
@@ -396,8 +398,8 @@
     </div>
 
     <div class="message rv">
-      <span class="en">MESSAGE</span>
-      <p>講師からのメッセージ <span class="tbc">【要確認】</span></p>
+      <span class="en">講師からのメッセージ</span>
+      <p>メッセージ本文 <span class="tbc">【要確認】</span></p>
     </div>
   </div>
 </section>
@@ -405,16 +407,16 @@
 <!-- ========== 6. 受講者の声 ========== -->
 <section class="voice">
   <div class="wrap">
-    <div class="sec-head rv"><span class="no">05</span><span class="big">VOICE</span><h2>受講者の声</h2></div>
+    <div class="sec-head rv"><span class="no">05 <em>VOICE</em></span><h2 class="big">受講者の声</h2></div>
     <div class="voices">
       <div class="v rv"><span class="q">“</span><div class="who"><div class="ph">写真</div><span>美容師歴〇年／〇代<br><span class="tbc">【要確認】</span></span></div><p>受講者の感想 <span class="tbc">【要確認】</span></p></div>
       <div class="v rv"><span class="q">“</span><div class="who"><div class="ph">写真</div><span>美容師歴〇年／〇代<br><span class="tbc">【要確認】</span></span></div><p>受講者の感想 <span class="tbc">【要確認】</span></p></div>
       <div class="v rv"><span class="q">“</span><div class="who"><div class="ph">写真</div><span>美容師歴〇年／〇代<br><span class="tbc">【要確認】</span></span></div><p>受講者の感想 <span class="tbc">【要確認】</span></p></div>
     </div>
-    <div class="ba rv"><div><div class="ph">受講前の<br>カット写真</div><i>BEFORE</i></div><div><div class="ph">受講後の<br>カット写真</div><i>AFTER</i></div></div>
+    <div class="ba rv"><div><div class="ph">受講前の<br>カット写真</div><i>受講前</i></div><div><div class="ph">受講後の<br>カット写真</div><i>受講後</i></div></div>
     <div class="cta rv" style="margin-top:72px">
       <p class="note">次は、あなたの番です</p>
-      <a class="btn" href="https://lin.ee/V2YqH0r" target="_blank" rel="noopener"><span><span class="en">ENTRY</span><span class="ja">LINEで「ベーシック」と送って申し込む</span></span><span class="arr"></span></a>
+      <a class="btn" href="https://lin.ee/V2YqH0r" target="_blank" rel="noopener"><span><span class="en">お申し込み</span><span class="ja">LINEで「ベーシック」と送って申し込む</span></span><span class="arr"></span></a>
     </div>
   </div>
 </section>
@@ -423,31 +425,31 @@
 <section id="outline">
   <div class="deco-circle" style="width:300px;height:300px;left:-170px;bottom:120px" aria-hidden="true"></div>
   <div class="wrap">
-    <div class="sec-head rv"><span class="no">06</span><span class="big">OUTLINE</span><h2>開催概要</h2></div>
+    <div class="sec-head rv"><span class="no">06 <em>OUTLINE</em></span><h2 class="big">開催概要</h2></div>
     <div class="tbl rv">
-      <div class="row"><span class="k">TITLE<b>講座名</b></span><div>ガチンコベーシックCLUB</div></div>
-      <div class="row"><span class="k">DATE<b>日程</b></span><div>
-        <ul class="dates"><li>01.26 <small>TUE</small></li><li>02.16 <small>TUE</small></li><li>03.23 <small>TUE</small></li><li>04.20 <small>TUE</small></li><li>05.25 <small>TUE</small></li><li>06.22 <small>TUE</small></li></ul>
+      <div class="row"><span class="k"><b>講座名</b></span><div>ガチンコBASIC CLUB</div></div>
+      <div class="row"><span class="k"><b>日程</b></span><div>
+        <ul class="dates"><li>1/26 <small>（火）</small></li><li>2/16 <small>（火）</small></li><li>3/23 <small>（火）</small></li><li>4/20 <small>（火）</small></li><li>5/25 <small>（火）</small></li><li>6/22 <small>（火）</small></li></ul>
         2027年・全6回コース／各回 10:00〜16:00<br><span class="tbc">【要確認：欠席時の振替・補講の有無】</span></div></div>
-      <div class="row"><span class="k">PLACE<b>会場</b></span><div>東京・代々木（仮）<br><span class="tbc">【要確認：会場名・住所・最寄駅】</span></div></div>
-      <div class="row"><span class="k">PRICE<b>参加費</b></span><div><span class="price">¥66,000</span> <span class="tbc">【要確認：税込/税別】</span><span class="price-sub">全6回分（1回あたり ¥11,000）／分割払い可能<br>支払方法・分割回数 <span class="tbc">【要確認】</span></span></div></div>
-      <div class="row"><span class="k">CAPACITY<b>定員</b></span><div>10名（少人数制）<span class="seat">残り〇名</span> <span class="tbc">【要確認】</span></div></div>
-      <div class="row"><span class="k">TARGET<b>対象</b></span><div>ベーシックを1から学びたい・学び直したい美容師の方<br>経験年数の目安 <span class="tbc">【要確認】</span></div></div>
-      <div class="row"><span class="k">ITEMS<b>持ち物</b></span><div><span class="tbc">【要確認】</span>（シザー・ウィッグ等）</div></div>
-      <div class="row"><span class="k">DEADLINE<b>申込締切</b></span><div><span class="tbc">【要確認】</span>（定員に達し次第締切）</div></div>
+      <div class="row"><span class="k"><b>会場</b></span><div>東京・代々木（仮）<br><span class="tbc">【要確認：会場名・住所・最寄駅】</span></div></div>
+      <div class="row"><span class="k"><b>参加費</b></span><div><span class="price">¥66,000</span> <span class="tbc">【要確認：税込/税別】</span><span class="price-sub">全6回分（1回あたり ¥11,000）／分割払い可能<br>支払方法・分割回数 <span class="tbc">【要確認】</span></span></div></div>
+      <div class="row"><span class="k"><b>定員</b></span><div>10名（少人数制）<span class="seat">残り〇名</span> <span class="tbc">【要確認】</span></div></div>
+      <div class="row"><span class="k"><b>対象</b></span><div>ベーシックを1から学びたい・学び直したい美容師の方<br>経験年数の目安 <span class="tbc">【要確認】</span></div></div>
+      <div class="row"><span class="k"><b>持ち物</b></span><div><span class="tbc">【要確認】</span>（シザー・ウィッグ等）</div></div>
+      <div class="row"><span class="k"><b>申込締切</b></span><div><span class="tbc">【要確認】</span>（定員に達し次第締切）</div></div>
     </div>
 
     <div class="flow rv" id="entry">
-      <h3><small>HOW TO ENTRY</small>お申し込みの流れ</h3>
+      <h3>お申し込みの流れ<small>3ステップで完了します</small></h3>
       <ol class="steps">
-        <li><span class="s">STEP<b>1</b></span><div>下のボタンから「美容師サプリ公式LINE」を友だち追加</div></li>
-        <li><span class="s">STEP<b>2</b></span><div>トーク画面で次の言葉を送信
-          <div class="copy-word"><code>ベーシック</code><button class="copy-btn" type="button" data-copy="ベーシック">COPY</button></div></div></li>
-        <li><span class="s">STEP<b>3</b></span><div>担当者から詳細のご案内が届きます <span class="tbc">【要確認：返信までの目安・お支払い方法】</span></div></li>
+        <li><span class="s">ステップ<b>1</b></span><div>下のボタンから「美容師サプリ公式LINE」を友だち追加</div></li>
+        <li><span class="s">ステップ<b>2</b></span><div>トーク画面で次の言葉を送信
+          <div class="copy-word"><code>ベーシック</code><button class="copy-btn" type="button" data-copy="ベーシック">コピーする</button></div></div></li>
+        <li><span class="s">ステップ<b>3</b></span><div>担当者から詳細のご案内が届きます <span class="tbc">【要確認：返信までの目安・お支払い方法】</span></div></li>
       </ol>
     </div>
     <div class="cta rv">
-      <a class="btn" href="https://lin.ee/V2YqH0r" target="_blank" rel="noopener"><span><span class="en">ENTRY</span><span class="ja">LINEで「ベーシック」と送って申し込む</span></span><span class="arr"></span></a>
+      <a class="btn" href="https://lin.ee/V2YqH0r" target="_blank" rel="noopener"><span><span class="en">お申し込み</span><span class="ja">LINEで「ベーシック」と送って申し込む</span></span><span class="arr"></span></a>
     </div>
   </div>
 </section>
@@ -455,7 +457,7 @@
 <!-- ========== 8. FAQ ========== -->
 <section class="faq" style="background:var(--bg2)">
   <div class="wrap">
-    <div class="sec-head rv"><span class="no">07</span><span class="big">FAQ</span><h2>よくあるご質問</h2></div>
+    <div class="sec-head rv"><span class="no">07 <em>FAQ</em></span><h2 class="big">よくあるご質問</h2></div>
     <div class="rv">
       <details><summary>美容師歴が長くても参加できますか？<span class="pm"></span></summary><div class="a">ベーシックを学び直したい方を対象にしています。経験年数の目安・制限は <span class="tbc">【要確認】</span></div></details>
       <details><summary>全6回すべて参加する必要がありますか？<span class="pm"></span></summary><div class="a">全6回のコースです。欠席時の振替や補講については <span class="tbc">【要確認】</span></div></details>
@@ -471,12 +473,12 @@
 <section class="final" id="final">
   <div class="deco-circle" style="width:280px;height:280px;right:-120px;top:-80px" aria-hidden="true"></div>
   <div class="wrap">
-    <span class="bigentry rv" aria-hidden="true">ENTRY</span>
+    <span class="bigentry rv" aria-hidden="true">お申し込み</span>
     <h2 class="rv">型を知るから、<br>型を破れる。</h2>
     <p class="rv">ベーシックは、一度身につければ一生使える技術です。<br>定員は10名。今の自分のカットに少しでも迷いがあるなら、この半年で土台を作り直しませんか。</p>
     <div class="cta rv">
-      <p class="note">2027.01.26 START ／ 全6回 ¥66,000（分割可）</p>
-      <a class="btn" href="https://lin.ee/V2YqH0r" target="_blank" rel="noopener"><span><span class="en">ENTRY</span><span class="ja">LINEで「ベーシック」と送って申し込む</span></span><span class="arr"></span></a>
+      <p class="note">2027年1月26日（火）開講／全6回 ¥66,000（分割可）</p>
+      <a class="btn" href="https://lin.ee/V2YqH0r" target="_blank" rel="noopener"><span><span class="en">お申し込み</span><span class="ja">LINEで「ベーシック」と送って申し込む</span></span><span class="arr"></span></a>
       <p class="after">友だち追加後、「ベーシック」とメッセージを送ってください</p>
     </div>
   </div>
@@ -484,14 +486,14 @@
 </main>
 
 <footer>
-  <p class="l">GACHINKO BASIC CLUB.</p>
+  <p class="l">ガチンコBASIC CLUB</p>
   <p>主催：<span class="tbc">【要確認】</span>　お問い合わせ：美容師サプリ公式LINE</p>
   <p>&copy; ガチンコベーシックCLUB</p>
 </footer>
 
 <!-- 追従CTA（スマホ） -->
 <div class="sticky" id="sticky">
-  <div class="txt"><b>01.26 START</b>定員10名</div>
+  <div class="txt"><b>1/26開講</b>定員10名</div>
   <a href="https://lin.ee/V2YqH0r" target="_blank" rel="noopener">LINEで申し込む<span class="arr"></span></a>
 </div>
 
@@ -517,7 +519,7 @@
   document.querySelectorAll('[data-copy]').forEach(function(b){
     b.addEventListener('click',function(){
       var t=b.getAttribute('data-copy');
-      (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='COPIED';setTimeout(function(){b.textContent='COPY'},1800)}).catch(function(){b.textContent='長押しでコピー'});
+      (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='コピーしました';setTimeout(function(){b.textContent='コピーする'},1800)}).catch(function(){b.textContent='長押しでコピー'});
     });
   });
 </script>
