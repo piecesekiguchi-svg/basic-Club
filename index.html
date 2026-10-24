@@ -177,10 +177,13 @@
   .v .who .ph{width:56px;height:56px;border-radius:50%;font-size:9px;letter-spacing:0;flex:0 0 56px}
   .v .who span{font-size:12px;color:var(--sub);line-height:1.6}
   .v p{font-size:14px}
-  .ba{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
-  .ba div{position:relative}
-  .ba .ph{aspect-ratio:3/4}
-  .ba i{position:absolute;left:0;bottom:-26px;font-style:normal;font-size:12px;font-weight:700;letter-spacing:.1em}
+  .works{margin-top:56px}
+  .works h3{font-family:var(--serif);font-size:18px;margin-bottom:16px;display:flex;align-items:center;gap:12px}
+  .works h3::after{content:"";flex:1;height:1px;background:var(--ink)}
+  .works-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .works-grid img{display:block;width:100%;aspect-ratio:9/10;object-fit:cover;background:#ececec}
+  .works-grid img:first-child{clip-path:polygon(16% 0,100% 0,100% 100%,0 100%,0 14%)}
+  .works-grid img:last-child{clip-path:polygon(0 0,100% 0,100% 86%,84% 100%,0 100%)}
 
   /* ========== 7. 開催概要 ========== */
   .tbl{border-top:1px solid var(--ink)}
@@ -273,6 +276,7 @@
     .person .ename{margin-top:0;font-size:min(5.6vw,72px)}
     .person.alt .photo{order:2}
     .voices{grid-template-columns:repeat(3,1fr)}
+    .works-grid{max-width:720px}
     .tbl .row{grid-template-columns:180px 1fr}
     .sticky{display:none}
   }
@@ -450,7 +454,13 @@
       <div class="v rv"><span class="q">“</span><div class="who"><div class="ph">写真</div><span>美容師歴〇年／〇代<br><span class="tbc">【要確認】</span></span></div><p>受講者の感想 <span class="tbc">【要確認】</span></p></div>
       <div class="v rv"><span class="q">“</span><div class="who"><div class="ph">写真</div><span>美容師歴〇年／〇代<br><span class="tbc">【要確認】</span></span></div><p>受講者の感想 <span class="tbc">【要確認】</span></p></div>
     </div>
-    <div class="ba rv"><div><div class="ph">受講前の<br>カット写真</div><i>受講前</i></div><div><div class="ph">受講後の<br>カット写真</div><i>受講後</i></div></div>
+    <div class="works rv">
+      <h3>受講者が作ったスタイル</h3>
+      <div class="works-grid">
+        <img src="images/student-01.jpg" alt="受講者が作ったショートスタイル" loading="lazy">
+        <img src="images/student-02.jpg" alt="受講者が作ったショートスタイル" loading="lazy">
+      </div>
+    </div>
     <div class="cta rv" style="margin-top:72px">
       <p class="note">次は、あなたの番です</p>
       <a class="btn" href="https://lin.ee/V2YqH0r" target="_blank" rel="noopener"><span><span class="en">お申し込み</span><span class="ja">LINEで「ベーシック」と送って申し込む</span></span><span class="arr"></span></a>
