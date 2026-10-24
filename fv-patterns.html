@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ファーストビュー3案｜ガチンコベーシックCLUB</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;700&family=Cormorant+Garamond:wght@500;600&family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Noto Sans JP",sans-serif;background:#e9e9e9;color:#141414;line-height:1.8}
+  .ph{background:#cfcfcf;color:#555;display:flex;align-items:center;justify-content:center;text-align:center;font-size:13px;font-weight:700;letter-spacing:.1em}
+  .tbc{color:#d9534f;font-weight:700;font-size:.85em}
+  .label{max-width:430px;margin:40px auto 10px;padding:0 16px}
+  .label h2{font-size:18px}
+  .label p{font-size:13px;color:#555}
+  .phone{max-width:430px;margin:0 auto;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.15);min-height:780px;position:relative}
+  .btn{display:flex;align-items:center;justify-content:center;width:100%;padding:17px 12px;background:#06c755;color:#fff;text-decoration:none;font-weight:700;font-size:16px;border-radius:999px;box-shadow:0 5px 0 #05a447;text-align:center;line-height:1.4}
+  .btn small{display:block;font-size:11px;font-weight:500}
+
+  /* ===== A：エディトリアル（白×黒・明朝） ===== */
+  .a{background:#fff}
+  .a .photo{height:380px}
+  .a .body{padding:28px 22px 36px}
+  .a .tag{display:inline-block;font-size:11px;letter-spacing:.15em;border:1px solid #141414;padding:3px 10px;margin-bottom:16px}
+  .a h1{font-family:"Noto Serif JP",serif;font-size:clamp(24px,7vw,28px);line-height:1.55}
+  .a h1 em{font-style:normal;border-bottom:2px solid #b08a4a}
+  .a .en{font-family:"Cormorant Garamond",serif;letter-spacing:.2em;color:#b08a4a;font-size:14px;margin-top:14px}
+  .a .en b{display:block;font-family:"Noto Serif JP",serif;color:#141414;font-size:18px;letter-spacing:.05em}
+  .a .info{font-size:13px;border-top:1px solid #ddd;margin:18px 0 22px}
+  .a .info p{padding:8px 0;border-bottom:1px solid #ddd}
+
+  /* ===== B：ダーク・ロンドン（黒×ゴールド・ゴシック太字） ===== */
+  .b{background:#0e0e0e;color:#fff}
+  .b .photo{position:absolute;inset:0;background:#3a3a3a;color:#888;align-items:flex-start;padding-top:140px}
+  .b .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.1) 20%,rgba(0,0,0,.92) 62%)}
+  .b .body{position:relative;padding:330px 22px 36px}
+  .b .from{font-family:"Cormorant Garamond",serif;letter-spacing:.3em;color:#c9a35b;font-size:13px}
+  .b h1{font-weight:900;font-size:30px;line-height:1.45;margin:10px 0 14px;letter-spacing:.02em}
+  .b h1 span{color:#c9a35b}
+  .b .name{font-size:13px;color:#ccc;border-left:2px solid #c9a35b;padding-left:10px;margin-bottom:18px}
+  .b .chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px}
+  .b .chips span{font-size:12px;border:1px solid #c9a35b;color:#e9d3a6;padding:3px 10px}
+
+  /* ===== C：ナチュラル（ベージュ・丸ゴシック・やわらか） ===== */
+  .c{background:#f5efe6;color:#3b3229}
+  .c .body{padding:34px 22px 36px}
+  .c .hello{font-family:"Zen Maru Gothic",sans-serif;font-size:13px;background:#fff;display:inline-block;padding:4px 14px;border-radius:999px;margin-bottom:16px}
+  .c h1{font-family:"Zen Maru Gothic",sans-serif;font-size:27px;line-height:1.6}
+  .c h1 mark{background:linear-gradient(transparent 60%,#f2cfa0 60%);color:inherit}
+  .c .photo{height:260px;border-radius:24px;margin:22px 0}
+  .c .title{font-family:"Zen Maru Gothic",sans-serif;font-weight:700;font-size:18px}
+  .c .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0 22px}
+  .c .cards div{background:#fff;border-radius:14px;padding:10px 6px;text-align:center;font-size:11px;line-height:1.4}
+  .c .cards b{display:block;font-size:15px}
+</style>
+</head>
+<body>
+
+<div class="label">
+  <h2>A案：エディトリアル（信頼・上品）</h2>
+  <p>白×黒×ゴールドの差し色、明朝体。参考LP（1guu / 東急）の求人サイト風の余白と大きな文字。「ちゃんと学べる」誠実さが伝わる。<b>※本番LP（index.html）はこの案で作成済み</b></p>
+</div>
+<div class="phone a">
+  <div class="photo ph">メイン写真<br>（カット中の手元・講師）</div>
+  <div class="body">
+    <span class="tag">美容師のためのベーシック講習｜全6回</span>
+    <h1>型のない、型破りは<br><em>【型なし】</em></h1>
+    <p class="en">GACHINKO BASIC CLUB<b>ガチンコベーシックCLUB</b></p>
+    <div class="info">
+      <p>2027年1/26（火）開講｜全6回｜10:00〜16:00</p>
+      <p>東京・代々木 <span class="tbc">【要確認】</span>｜定員10名｜¥66,000（分割可）</p>
+    </div>
+    <a class="btn" href="https://lin.ee/V2YqH0r"><span><small>美容師サプリ公式LINEで</small>「ベーシック」と送って申し込む</span></a>
+  </div>
+</div>
+
+<div class="label">
+  <h2>B案：ダーク・ロンドン（かっこよさ・本格派）</h2>
+  <p>黒背景に写真全面、太いゴシック＋ゴールド。Sassoon首席の実績を前面に出し「憧れ」で惹きつける。SNS・リールから来た若手にも響きやすい。</p>
+</div>
+<div class="phone b">
+  <div class="photo ph">メイン写真（全面）<br>講師のポートレート／作品</div>
+  <div class="shade"></div>
+  <div class="body">
+    <p class="from">FROM LONDON TO TOKYO</p>
+    <h1>型のない、<br>型破りは<br><span>【型なし】</span></h1>
+    <p class="name">美容師サプリ代表 関口裕樹<br>Sassoon Academy London 首席卒業 ヤマグチ ヒロム<br>2人の講師が教える全6回</p>
+    <div class="chips"><span>2027.1.26 START</span><span>定員10名</span><span>¥66,000・分割可</span><span>東京・代々木</span></div>
+    <a class="btn" href="https://lin.ee/V2YqH0r"><span><small>美容師サプリ公式LINEで</small>「ベーシック」と送って申し込む</span></a>
+  </div>
+</div>
+
+<div class="label">
+  <h2>C案：ナチュラル（やさしさ・学び直し）</h2>
+  <p>ベージュ×丸ゴシック。「今さら聞けない」「年齢的に不安」という人の心理的ハードルを下げる。押し売り感が最も少ない。</p>
+</div>
+<div class="phone c">
+  <div class="body">
+    <span class="hello">ベーシック、ちゃんと教わったことありますか？</span>
+    <h1>型のない、<br>型破りは<br><mark>【型なし】</mark></h1>
+    <div class="photo ph">写真<br>（講習の様子・少人数の雰囲気）</div>
+    <p class="title">ガチンコベーシックCLUB</p>
+    <div class="cards">
+      <div>全6回<b>1/26〜</b>毎月火曜</div>
+      <div>少人数<b>10名</b>限定</div>
+      <div>参加費<b>¥66,000</b>分割OK</div>
+    </div>
+    <a class="btn" href="https://lin.ee/V2YqH0r"><span><small>美容師サプリ公式LINEで</small>「ベーシック」と送って申し込む</span></a>
+  </div>
+</div>
+<div style="height:60px"></div>
+</body>
+</html>
