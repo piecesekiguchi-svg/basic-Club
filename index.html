@@ -180,6 +180,7 @@
   .works{margin-top:56px}
   .works h3{font-family:var(--serif);font-size:18px;margin-bottom:16px;display:flex;align-items:center;gap:12px}
   .works h3::after{content:"";flex:1;height:1px;background:var(--ink)}
+  .works-note{font-size:12px;color:var(--sub);margin:-6px 0 14px}
   .works-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
   .works-grid img{display:block;width:100%;aspect-ratio:9/10;object-fit:cover;background:#ececec}
   .works-grid img:first-child{clip-path:polygon(16% 0,100% 0,100% 100%,0 100%,0 14%)}
@@ -332,7 +333,7 @@
       <a class="btn" href="https://lin.ee/V2YqH0r" target="_blank" rel="noopener">
         <span><span class="en">お申し込み</span><span class="ja">LINEで「ベーシック」と送って申し込む</span></span><span class="arr"></span>
       </a>
-      <p class="after">申込締切：<span class="tbc">【要確認】</span>　残席：<span class="tbc">【要確認】</span></p>
+      <p class="after">申込締切：2026年12月31日（定員に達し次第終了）<span class="js-seats-wrap" hidden>　残席：<b class="js-seats"></b></span></p>
     </div>
   </div>
 </div>
@@ -456,6 +457,7 @@
     </div>
     <div class="works rv">
       <h3>受講者が作ったスタイル</h3>
+      <p class="works-note">別セミナーでの受講者さんのスタイル</p>
       <div class="works-grid">
         <img src="images/student-01.jpg" alt="受講者が作ったショートスタイル" loading="lazy">
         <img src="images/student-02.jpg" alt="受講者が作ったショートスタイル" loading="lazy">
@@ -480,10 +482,10 @@
         2027年・全6回コース／各回 10:00〜16:00<br><span class="tbc">【要確認：欠席時の振替・補講の有無】</span></div></div>
       <div class="row"><span class="k"><b>会場</b></span><div>東京・代々木（仮）<br><span class="tbc">【要確認：会場名・住所・最寄駅】</span></div></div>
       <div class="row"><span class="k"><b>参加費</b></span><div><span class="price">¥66,000</span> <span class="tbc">【要確認：税込/税別】</span><span class="price-sub">全6回分（1回あたり ¥11,000）／分割払い可能<br>支払方法・分割回数 <span class="tbc">【要確認】</span></span></div></div>
-      <div class="row"><span class="k"><b>定員</b></span><div>10名（少人数制）<span class="seat">残り〇名</span> <span class="tbc">【要確認】</span></div></div>
+      <div class="row"><span class="k"><b>定員</b></span><div>10名（少人数制）<span class="js-seats-wrap" hidden><span class="seat js-seats"></span></span></div></div>
       <div class="row"><span class="k"><b>対象</b></span><div>ベーシックを1から学びたい・学び直したい美容師の方<br>経験年数の目安 <span class="tbc">【要確認】</span></div></div>
       <div class="row"><span class="k"><b>持ち物</b></span><div><span class="tbc">【要確認】</span>（シザー・ウィッグ等）</div></div>
-      <div class="row"><span class="k"><b>申込締切</b></span><div><span class="tbc">【要確認】</span>（定員に達し次第締切）</div></div>
+      <div class="row"><span class="k"><b>申込締切</b></span><div>2026年12月31日（定員に達し次第終了）</div></div>
     </div>
 
     <div class="flow rv" id="entry">
@@ -541,7 +543,7 @@
 
 <!-- 追従CTA（スマホ） -->
 <div class="sticky" id="sticky">
-  <div class="txt"><b>1/26開講</b>定員10名</div>
+  <div class="txt"><b>1/26開講</b><span class="js-seats-alt">定員10名</span></div>
   <a href="https://lin.ee/V2YqH0r" target="_blank" rel="noopener">LINEで申し込む<span class="arr"></span></a>
 </div>
 
@@ -570,6 +572,23 @@
       (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='コピーしました';setTimeout(function(){b.textContent='コピーする'},1800)}).catch(function(){b.textContent='長押しでコピー'});
     });
   });
+  // ===== 残席の表示 =====
+  // 方法A：Googleスプレッドシート（A1セルに残席数）を「ウェブに公開→CSV」したURLを貼る
+  var SEATS_CSV_URL = '';
+  // 方法B：URLを使わない場合は、ここに残席数を直接書く（例：7）。空ならnull
+  var SEATS_MANUAL = null;
+  (function(){
+    function show(n){
+      if(isNaN(n))return;
+      var t=n>0?'残り'+n+'席':'満席';
+      document.querySelectorAll('.js-seats').forEach(function(e){e.textContent=t});
+      document.querySelectorAll('.js-seats-wrap').forEach(function(e){e.hidden=false});
+      document.querySelectorAll('.js-seats-alt').forEach(function(e){e.textContent=n>0?'残り'+n+'席':'満席'});
+    }
+    if(SEATS_CSV_URL){
+      fetch(SEATS_CSV_URL,{cache:'no-store'}).then(function(r){return r.text()}).then(function(t){show(parseInt(t.split(/[\r\n,]/)[0].replace(/"/g,''),10))}).catch(function(){});
+    }else if(SEATS_MANUAL!==null){show(SEATS_MANUAL)}
+  })();
 </script>
 </body>
 </html>
