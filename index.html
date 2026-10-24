@@ -170,14 +170,7 @@
 
   /* ========== 6. 受講者の声 ========== */
   .voice{background:var(--bg2)}
-  .voices{display:grid;gap:20px}
-  .v{background:#fff;padding:26px 22px;position:relative}
-  .v .q{font-family:var(--en);font-weight:800;font-size:72px;line-height:.6;position:absolute;right:16px;top:26px;color:var(--bg2)}
-  .v .who{display:flex;gap:14px;align-items:center;margin-bottom:14px}
-  .v .who .ph{width:56px;height:56px;border-radius:50%;font-size:9px;letter-spacing:0;flex:0 0 56px}
-  .v .who span{font-size:12px;color:var(--sub);line-height:1.6}
-  .v p{font-size:14px}
-  .works{margin-top:56px}
+  .works{margin-top:0}
   .works h3{font-family:var(--serif);font-size:18px;margin-bottom:16px;display:flex;align-items:center;gap:12px}
   .works h3::after{content:"";flex:1;height:1px;background:var(--ink)}
   .works-note{font-size:12px;color:var(--sub);margin:-6px 0 14px}
@@ -276,7 +269,6 @@
     .person .photo{margin:0;height:560px}
     .person .ename{margin-top:0;font-size:min(5.6vw,72px)}
     .person.alt .photo{order:2}
-    .voices{grid-template-columns:repeat(3,1fr)}
     .works-grid{max-width:720px}
     .tbl .row{grid-template-columns:180px 1fr}
     .sticky{display:none}
@@ -323,9 +315,9 @@
       <dl class="facts">
         <div><dt>開講日</dt><dd><b>1/26</b>（火）<br>2027年・全6回</dd></div>
         <div><dt>時間</dt><dd><b>10–16</b><br>10:00〜16:00</dd></div>
-        <div><dt>参加費</dt><dd><b>¥66,000</b><br>分割OK／1回¥11,000</dd></div>
+        <div><dt>参加費</dt><dd><b>¥66,000</b> 税込<br>分割OK／1回¥11,000</dd></div>
         <div><dt>定員</dt><dd><b>10</b> 名<br>少人数制</dd></div>
-        <div class="wide"><dt>会場</dt><dd>東京・代々木 <span class="tbc">【要確認：会場名】</span></dd></div>
+        <div class="wide"><dt>会場</dt><dd>東京・代々木（仮）</dd></div>
       </dl>
     </div>
     <div class="cta">
@@ -333,7 +325,7 @@
       <a class="btn" href="https://lin.ee/V2YqH0r" target="_blank" rel="noopener">
         <span><span class="en">お申し込み</span><span class="ja">LINEで「ベーシック」と送って申し込む</span></span><span class="arr"></span>
       </a>
-      <p class="after">申込締切：2026年12月31日（定員に達し次第終了）<span class="js-seats-wrap" hidden>　残席：<b class="js-seats"></b></span></p>
+      <p class="after">申込締切：2026年12月31日（定員に達し次第終了）</p>
     </div>
   </div>
 </div>
@@ -449,15 +441,8 @@
 <!-- ========== 6. 受講者の声 ========== -->
 <section class="voice">
   <div class="wrap">
-    <div class="sec-head rv"><span class="no">05 <em>VOICE</em></span><h2 class="big">受講者の声</h2></div>
-    <div class="voices">
-      <div class="v rv"><span class="q">“</span><div class="who"><div class="ph">写真</div><span>美容師歴〇年／〇代<br><span class="tbc">【要確認】</span></span></div><p>受講者の感想 <span class="tbc">【要確認】</span></p></div>
-      <div class="v rv"><span class="q">“</span><div class="who"><div class="ph">写真</div><span>美容師歴〇年／〇代<br><span class="tbc">【要確認】</span></span></div><p>受講者の感想 <span class="tbc">【要確認】</span></p></div>
-      <div class="v rv"><span class="q">“</span><div class="who"><div class="ph">写真</div><span>美容師歴〇年／〇代<br><span class="tbc">【要確認】</span></span></div><p>受講者の感想 <span class="tbc">【要確認】</span></p></div>
-    </div>
+    <div class="sec-head rv"><span class="no">05 <em>WORKS</em></span><h2 class="big">受講者が作った<br>スタイル</h2><p class="lead">別セミナーでの受講者さんのスタイル</p></div>
     <div class="works rv">
-      <h3>受講者が作ったスタイル</h3>
-      <p class="works-note">別セミナーでの受講者さんのスタイル</p>
       <div class="works-grid">
         <img src="images/student-01.jpg" alt="受講者が作ったショートスタイル" loading="lazy">
         <img src="images/student-02.jpg" alt="受講者が作ったショートスタイル" loading="lazy">
@@ -480,9 +465,9 @@
       <div class="row"><span class="k"><b>日程</b></span><div>
         <ul class="dates"><li>1/26 <small>（火）</small></li><li>2/16 <small>（火）</small></li><li>3/23 <small>（火）</small></li><li>4/20 <small>（火）</small></li><li>5/25 <small>（火）</small></li><li>6/22 <small>（火）</small></li></ul>
         2027年・全6回コース／各回 10:00〜16:00<br><span class="tbc">【要確認：欠席時の振替・補講の有無】</span></div></div>
-      <div class="row"><span class="k"><b>会場</b></span><div>東京・代々木（仮）<br><span class="tbc">【要確認：会場名・住所・最寄駅】</span></div></div>
-      <div class="row"><span class="k"><b>参加費</b></span><div><span class="price">¥66,000</span> <span class="tbc">【要確認：税込/税別】</span><span class="price-sub">全6回分（1回あたり ¥11,000）／分割払い可能<br>支払方法・分割回数 <span class="tbc">【要確認】</span></span></div></div>
-      <div class="row"><span class="k"><b>定員</b></span><div>10名（少人数制）<span class="js-seats-wrap" hidden><span class="seat js-seats"></span></span></div></div>
+      <div class="row"><span class="k"><b>会場</b></span><div>東京・代々木（仮）</div></div>
+      <div class="row"><span class="k"><b>参加費</b></span><div><span class="price">¥66,000</span>（税込）<span class="price-sub">全6回分（1回あたり ¥11,000）／分割払い可能<br>支払方法・分割回数 <span class="tbc">【要確認】</span></span></div></div>
+      <div class="row"><span class="k"><b>定員</b></span><div>10名（少人数制）</div></div>
       <div class="row"><span class="k"><b>対象</b></span><div>ベーシックを1から学びたい・学び直したい美容師の方<br>経験年数の目安 <span class="tbc">【要確認】</span></div></div>
       <div class="row"><span class="k"><b>持ち物</b></span><div><span class="tbc">【要確認】</span>（シザー・ウィッグ等）</div></div>
       <div class="row"><span class="k"><b>申込締切</b></span><div>2026年12月31日（定員に達し次第終了）</div></div>
@@ -527,7 +512,7 @@
     <h2 class="rv">型を知るから、<br>型を破れる。</h2>
     <p class="rv">ベーシックは、一度身につければ一生使える技術です。<br>定員は10名。今の自分のカットに少しでも迷いがあるなら、この半年で土台を作り直しませんか。</p>
     <div class="cta rv">
-      <p class="note">2027年1月26日（火）開講／全6回 ¥66,000（分割可）</p>
+      <p class="note">2027年1月26日（火）開講／全6回 ¥66,000（税込・分割可）</p>
       <a class="btn" href="https://lin.ee/V2YqH0r" target="_blank" rel="noopener"><span><span class="en">お申し込み</span><span class="ja">LINEで「ベーシック」と送って申し込む</span></span><span class="arr"></span></a>
       <p class="after">友だち追加後、「ベーシック」とメッセージを送ってください</p>
     </div>
@@ -537,13 +522,13 @@
 
 <footer>
   <p class="l">ガチンコBASIC CLUB</p>
-  <p>主催：<span class="tbc">【要確認】</span>　お問い合わせ：美容師サプリ公式LINE</p>
+  <p>主催：株式会社PiECE　お問い合わせ：美容師サプリ公式LINE</p>
   <p>&copy; ガチンコベーシックCLUB</p>
 </footer>
 
 <!-- 追従CTA（スマホ） -->
 <div class="sticky" id="sticky">
-  <div class="txt"><b>1/26開講</b><span class="js-seats-alt">定員10名</span></div>
+  <div class="txt"><b>1/26開講</b>定員10名</div>
   <a href="https://lin.ee/V2YqH0r" target="_blank" rel="noopener">LINEで申し込む<span class="arr"></span></a>
 </div>
 
@@ -572,23 +557,6 @@
       (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(function(){b.textContent='コピーしました';setTimeout(function(){b.textContent='コピーする'},1800)}).catch(function(){b.textContent='長押しでコピー'});
     });
   });
-  // ===== 残席の表示 =====
-  // 方法A：Googleスプレッドシート（A1セルに残席数）を「ウェブに公開→CSV」したURLを貼る
-  var SEATS_CSV_URL = '';
-  // 方法B：URLを使わない場合は、ここに残席数を直接書く（例：7）。空ならnull
-  var SEATS_MANUAL = null;
-  (function(){
-    function show(n){
-      if(isNaN(n))return;
-      var t=n>0?'残り'+n+'席':'満席';
-      document.querySelectorAll('.js-seats').forEach(function(e){e.textContent=t});
-      document.querySelectorAll('.js-seats-wrap').forEach(function(e){e.hidden=false});
-      document.querySelectorAll('.js-seats-alt').forEach(function(e){e.textContent=n>0?'残り'+n+'席':'満席'});
-    }
-    if(SEATS_CSV_URL){
-      fetch(SEATS_CSV_URL,{cache:'no-store'}).then(function(r){return r.text()}).then(function(t){show(parseInt(t.split(/[\r\n,]/)[0].replace(/"/g,''),10))}).catch(function(){});
-    }else if(SEATS_MANUAL!==null){show(SEATS_MANUAL)}
-  })();
 </script>
 </body>
 </html>
