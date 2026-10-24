@@ -112,11 +112,15 @@
   .fig{margin:0 -20px 56px;position:relative}
   .fig img{display:block;width:100%;height:auto;clip-path:polygon(0 0,100% 0,100% 88%,88% 100%,0 100%)}
   .fig.r img{clip-path:polygon(12% 0,100% 0,100% 100%,0 100%,0 12%)}
-  .gallery{display:grid;grid-auto-flow:column;grid-auto-columns:68%;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:20px;margin:0 -20px 64px;padding:0 20px;scrollbar-width:none}
-  .gallery::-webkit-scrollbar{display:none}
-  .gallery img{width:100%;aspect-ratio:3/4;object-fit:cover;scroll-snap-align:start;display:block}
-  .gallery img:first-child{clip-path:polygon(14% 0,100% 0,100% 100%,0 100%,0 10%)}
-  .gallery img:last-child{clip-path:polygon(0 0,100% 0,100% 90%,86% 100%,0 100%)}
+  .spot{margin:0 0 64px;width:78%}
+  .spot.l{margin-left:-20px}
+  .spot.r{margin-left:auto;margin-right:-20px}
+  .spot.wide{width:calc(100% + 20px);margin-top:40px;margin-bottom:8px}
+  .spot img{display:block;width:100%;object-fit:cover}
+  .spot.l img{clip-path:polygon(0 0,100% 0,100% 86%,84% 100%,0 100%)}
+  .spot.r img{clip-path:polygon(16% 0,100% 0,100% 100%,0 100%,0 14%)}
+  .worry .spot,.bridge+.spot{margin-top:56px}
+  .curri .spot{margin-top:48px;margin-bottom:40px}
   .diff-wrap{margin-top:88px}
   .diff-wrap .fig{margin-bottom:40px}
   .diff-wrap .diff{margin-top:0}
@@ -256,7 +260,10 @@
     .fv-info .inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end}
     .benefit-list{grid-template-columns:1fr 1fr;column-gap:64px}
     .fig{margin:0 0 72px}
-    .gallery{grid-auto-flow:row;grid-template-columns:repeat(4,1fr);overflow:visible;margin:0 0 96px;padding:0}
+    .spot{width:46%;margin-bottom:80px}
+    .spot.l{margin-left:0}
+    .spot.r{margin-right:0}
+    .spot.wide{width:62%;margin-top:56px}
     .diff-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:96px}
     .diff-wrap .fig{margin:0}
     .diff-wrap .diff{margin-top:0}
@@ -339,6 +346,7 @@
       <li>作るスタイルが、どこか垢抜けない</li>
       <li>ベーシックを1から教えてくれる人が、周りにいない</li>
     </ul>
+    <figure class="spot r rv"><img src="images/style-02.jpg" alt="ショートスタイル" loading="lazy" style="object-position:50% 30%;aspect-ratio:3/4"></figure>
     <p class="bridge rv">それは才能ではなく、<br><b>ベーシックという「型」</b>を<br>体系的に学ぶ機会がなかっただけ<br>かもしれません。</p>
   </div>
 </section>
@@ -347,12 +355,7 @@
 <section style="padding-top:40px">
   <div class="wrap">
     <div class="sec-head rv"><span class="no">02 <em>BENEFIT</em></span><h2 class="big">このセミナーで<br>得られること</h2></div>
-    <div class="gallery rv">
-      <img src="images/main-style.jpg" alt="ショートスタイル" loading="lazy" style="object-position:50% 35%">
-      <img src="images/style-02.jpg" alt="ショートスタイル" loading="lazy" style="object-position:50% 30%">
-      <img src="images/style-03.jpg" alt="ショートスタイル" loading="lazy" style="object-position:50% 30%">
-      <img src="images/style-04.jpg" alt="ショートスタイル" loading="lazy" style="object-position:46% 30%">
-    </div>
+    <figure class="spot l rv"><img src="images/main-style.jpg" alt="ショートスタイル" loading="lazy" style="object-position:50% 35%;aspect-ratio:3/4"></figure>
     <div class="benefit-list">
       <div class="benefit rv"><span class="num">01</span><span class="en">スピード</span><h3>カットスピードが<br>圧倒的に早くなる</h3><p>「どこから・なぜ切るのか」が明確になれば、手が止まらなくなります。</p></div>
       <div class="benefit rv"><span class="num">02</span><span class="en">持ち</span><h3>お客様のスタイルの<br>持ちが変わる</h3><p>土台から正しく組み立てたカットは、伸びても形が崩れにくくなります。</p></div>
@@ -387,6 +390,7 @@
       <li><span class="d"><b>5/25</b><i>火曜</i></span><div><span class="day">第5回</span><h3>テーマ <span class="tbc">【要確認】</span></h3><p>内容 <span class="tbc">【要確認】</span></p></div></li>
       <li><span class="d"><b>6/22</b><i>火曜</i></span><div><span class="day">第6回</span><h3>テーマ <span class="tbc">【要確認】</span></h3><p>内容 <span class="tbc">【要確認】</span></p></div></li>
     </ol>
+    <figure class="spot r rv"><img src="images/style-03.jpg" alt="ショートスタイル" loading="lazy" style="object-position:50% 30%;aspect-ratio:3/4"></figure>
     <p class="curri-note rv"><b>1日の流れ</b>：講義／デモンストレーション／実習（ウィッグ）など <span class="tbc">【要確認】</span><br><b>修了時</b>：修了証などの有無 <span class="tbc">【要確認】</span></p>
   </div>
 </section>
@@ -456,7 +460,7 @@
 
 <!-- ========== 7. 開催概要 ========== -->
 <section id="outline">
-  <div class="deco-circle" style="width:300px;height:300px;left:-170px;bottom:120px" aria-hidden="true"></div>
+  <div class="deco-circle" style="width:300px;height:300px;left:-250px;bottom:420px" aria-hidden="true"></div>
   <div class="wrap">
     <div class="sec-head rv"><span class="no">06 <em>OUTLINE</em></span><h2 class="big">開催概要</h2></div>
     <div class="tbl rv">
@@ -507,6 +511,7 @@
   <div class="deco-circle" style="width:280px;height:280px;right:-120px;top:-80px" aria-hidden="true"></div>
   <div class="wrap">
     <span class="bigentry rv" aria-hidden="true">お申し込み</span>
+    <figure class="spot l rv wide"><img src="images/style-04.jpg" alt="ショートスタイル" loading="lazy" style="object-position:46% 30%;aspect-ratio:4/3"></figure>
     <h2 class="rv">型を知るから、<br>型を破れる。</h2>
     <p class="rv">ベーシックは、一度身につければ一生使える技術です。<br>定員は10名。今の自分のカットに少しでも迷いがあるなら、この半年で土台を作り直しませんか。</p>
     <div class="cta rv">
